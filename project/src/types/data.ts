@@ -39,14 +39,20 @@ export type NewComment = {
 };
 
 export type UserAuthStatus = {
-  avatarUrl: string;
+  avatarUrl?: string;
   email: string;
   id: number;
-  name: string;
+  name?: string;
   token: string;
 }
 
-export type UserData = {
+export type UserLoginData = {
   email: string;
   password: string;
+}
+
+export type UserData = {
+  id: number;
+  email: string;
+  token: string;
 }

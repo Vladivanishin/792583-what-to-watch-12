@@ -7,13 +7,38 @@ export enum AppRoute {
   Player = '/player/:id'
 }
 
+export enum FilmNavigation {
+  Overview = 'Overview',
+  Details = 'Details',
+  Reviews = 'Reviews',
+}
+
+export enum GenreFilter {
+  AllGenres = 'All genre',
+  Comedy = 'Comedy',
+  Crime = 'Crime',
+  Documentary = 'Documentary',
+  Drama = 'Drama',
+  Horror = 'Horror',
+  KidsFamily = 'Kids & Family',
+  Romance = 'Romance',
+  SciFi = 'Sci-Fi',
+  Thrillers = 'Thrillers'
+}
+
 export enum AppPage {
   Main = 'main',
-  SignIn = 'login',
-  MyList = 'user-page',
+  SignIn = 'sign-in',
+  MyList = 'page-title',
   Film = 'film-card',
   AddReview = 'review',
-  Player = 'player'
+  Player = 'player',
+}
+
+export enum HeaderVersion {
+  UserPage = 'user-page__head',
+  FilmCard = 'film-card__head',
+  Empty = '',
 }
 
 export enum AuthorizationStatus {
@@ -33,4 +58,6 @@ export enum APIRoute {
 
 export enum NameSpace {
   Data = 'DATA',
+  User = 'USER',
+  Service = 'SERVICE',
 }

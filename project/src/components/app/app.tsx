@@ -10,8 +10,17 @@ import LoginScreen from '../../pages/login-screen/login-screen';
 import { HelmetProvider } from 'react-helmet-async';
 import { browserHistory } from '../../browser-history';
 import HistoryRouter from '../history-route/history-route';
+import { useAppSelector } from '../../hooks';
+import { getIsLoading } from '../../store/data-process/selectors';
+import LoadingScreen from '../../pages/loading-screen/loading-screen';
 
 function App(): JSX.Element {
+  const isLoading = useAppSelector(getIsLoading);
+
+  if (isLoading) {
+    return <LoadingScreen />;
+  }
+
   return (
     <HelmetProvider>
       <HistoryRouter history={browserHistory}>
